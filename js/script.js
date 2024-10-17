@@ -4,6 +4,7 @@ const enLanguage=document.querySelector('#language-switch-eng');
 const uaLanguage=document.querySelector('#language-switch-ukr');
 const burger=document.querySelector(".burger_menu_section");
 const body=document.querySelector("body");
+const textAnimation=document.querySelector(".textAnimation");
 
 (function initialTheme(){
     const theme=localStorage.getItem("theme");
@@ -38,8 +39,14 @@ const body=document.querySelector("body");
 
     if(language==="en"){
         enLanguage.checked=true;
+
+        textAnimation.classList.add("engAnimatedText");
+        textAnimation.classList.remove("ukrAnimatedText");
     }else{
         uaLanguage.checked=true;
+
+        textAnimation.classList.remove("engAnimatedText");
+        textAnimation.classList.add("ukrAnimatedText");
     }
 })();
 
