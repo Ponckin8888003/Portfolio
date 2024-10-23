@@ -72,7 +72,7 @@
                 <img src="img/user_photo.jpg">
             </section>
             <section class="user_content_card_section">
-                <h3 id="userName">Стахів Юрій</h3>
+                <h3 id="userName">Крушельницький Ігор</h3>
                 <div class="user_position">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M17 7a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3H6a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3zm-3-1h-4a1 1 0 0 0-1 1h6a1 1 0 0 0-1-1M6 9h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1" clip-rule="evenodd"/></svg>
                     <p id="userPositionContent01">Веб-Розробник/Дизайнер</p>
@@ -110,7 +110,7 @@
                 <div class="welcome_description_section">
                     <div class="typing-container">
                         <p class="line first-line" id="typingFirstLine">Привіт,</p>
-                        <p class="line second-line" id="typingSecondLine">Мене звати Юрій, і я</p>
+                        <p class="line second-line" id="typingSecondLine">Мене звати Ігор, і я</p>
                         <div class="animated-text animated-text03">
                             <span class="textAnimation engAnimatedText"></span>
                         </div>
@@ -278,11 +278,11 @@
                 </section>
                 <section class="education_user_section">
                     <h5>Освіта</h5>
-                    <p>Figma ipsum component variant main layer. Mask stroke layer stroke strikethrough duplicate style slice share thumbnail. Strikethrough object group inspect underline create union star. Follower bold content italic library export horizontal arrow. Clip team star font vertical. Figjam vector horizontal effect community distribute. Frame draft list content polygon community main.</p>
+                    <p>Закінчив Івано-Франківський Ліцей №20 з відзнакою, також вивчав англійську мову на курсах "English Speaking Club" і наразі маю рівень B1+. 2 роки навчався у "Школі Комп'ютерної Майстерності" та 1 рік у "Vinnytsa IT Academy", у результаті чого опанував технології, необхідні для розробки складних та масштабних веб-сайтів та створення вражаючих веб-дизайнів.</p>
                 </section>
                 <section class="hobi_user_section">
                     <h5>Хобі</h5>
-                    <p>Figma ipsum component variant main layer. Mask stroke layer stroke strikethrough duplicate style slice share thumbnail. Strikethrough object group inspect underline create union star. Follower bold content italic library export horizontal arrow. Clip team star font vertical. Figjam vector horizontal effect community distribute. Frame draft list content polygon community main.</p>
+                    <p>Регулярно займаюсь спортом, а саме: бігом, велоспортом, практикую бойові мистецтва та відвідую заняття з волейболу. Полюбляю читати довідкову літературу, але також добре ознайомлений зі світовими "скарбами" художньої. Також можу виокремити своє захоплення світовою історією, знання якої часто поглиблюю за допомогою переглядом чи прослуховуванням відповідної інформації.</p>
                 </section>
                 <section class="user_photo_content">
                     <img src="img/user_photo_02.jpg" alt="">
@@ -290,44 +290,44 @@
             </div>
         </section>
 
-        <form action="">
+        <form id="telegramForm">
             <p class="form_title">Маєте свіжі ідеї? Поділіться кількома зі мною, щоб вони стали реальними!</p>
             <section class="input_form_section">
-                <input type="text" name="name" placeholder="Ім'я">
-                <input type="email" name="eMail" placeholder="Ел.адреса">
-                <textarea type="text" name="textArea" placeholder="Трішки про проєкт"></textarea>
+                <input type="text" name="name" placeholder="Ім'я" required>
+                <input type="email" name="eMail" placeholder="Ел.адреса" required>
+                <textarea type="text" name="textArea" placeholder="Трішки про проєкт" required></textarea>
             </section>
             <section class="checkbox_form_section">
                 <p class="checkbox_form_title">Чим я можу Вам допомогти?</p>
                 <section class="checkbox_form_container">
                     <label class="checkbox_container">
                         <p>Створити веб-сайт</p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="formOption" value="Створити веб-сай">
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox_container">
                         <p>Оновити сайт з дизайном</p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="formOption" value="Оновити сайт з дизайном">
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox_container">
                         <p>Переробити дизайн</p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="formOption" value="Переробити дизайн">
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox_container">
                         <p>Написати код до готового дизайну</p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="formOption" value="Написати код до готового дизайну">
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox_container">
                         <p>Додати нові функції до сайту</p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="formOption" value="Додати нові функції до сайту">
                         <span class="checkmark"></span>
                     </label>
                     <label class="checkbox_container">
                         <p>Інше</p>
-                        <input type="checkbox">
+                        <input type="checkbox" id="formOption" value="Інше">
                         <span class="checkmark"></span>
                     </label>
                 </section>
@@ -341,8 +341,9 @@
     
 </section>
     
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
-    <script src="js/script.js" type="module"></script>
+    <script src="js/script.js"></script>
     <script src="js/google-translate.js"></script>
 </body>
 </html>
