@@ -5,6 +5,7 @@ const uaLanguage=document.querySelector('#language-switch-ukr');
 const burger=document.querySelector(".burger_menu_section");
 const body=document.querySelector("body");
 const textAnimation=document.querySelector(".textAnimation");
+const telegramForm=document.querySelector("#telegramForm");
 
 (function initialTheme(){
     const theme=localStorage.getItem("theme");
@@ -55,6 +56,7 @@ darkTheme.addEventListener("click", handleDarkTheme);
 enLanguage.addEventListener("click", enButtonAnimation);
 uaLanguage.addEventListener("click", uaButtonAnimation);
 burger.addEventListener("click", handleMenu);
+telegramForm.addEventListener("submit", handleMessage);
 
 function handleLightTheme(){
     body.classList.remove("dark_theme");
@@ -86,4 +88,44 @@ function handleMenu(){
     openedBurger.classList.toggle("closed");
     closedBurger.classList.toggle("closed");
     navigation.classList.toggle("open");
+}
+
+const TOKEN="7572524186:AAGL4EfxF0JLCMMUCnYTET5ERK3NohznPQE";
+const CHATID="-1002312371608";
+const BOT_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+async function handleMessage(e){
+    e.preventDefault();
+
+    const options=document.querySelectorAll("#formOption");
+    const selectedOptions=[];
+    options.forEach(option=>{
+        if(option.checked){
+            selectedOptions.push(option.value);
+        }
+    });
+
+    const name=e.target.name.value;
+    const eMail=e.target.eMail.value;
+    const text=e.target.textArea.value;
+
+    const message=`**Нове замовлення**\n\n
+                    **Ім'я**: ${name}\n
+                    **E-mail**: ${eMail}\n
+                    **Повідомлення**: ${text}\n
+                    **Опції**: ${selectedOptions}\n`;
+
+    try{
+        await axios.post(BOT_URL, {
+            chat_id: CHATID,
+            parse_mode: 'Markdown',
+            text: message
+        });
+        alert("Контактні дані надіслано!!!");
+    }catch(err){
+        console.error(err);
+        alert("Сталася помилка, спробуйте ще раз!!!");
+    }
+
+    telegramForm.reset();
 }
