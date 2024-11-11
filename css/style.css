@@ -213,8 +213,6 @@ main{
     column-gap: 2.375rem;
     font-family: "Jura";
     margin-top: 1.5rem;
-
-   
 }
 
 .user_card_section{
@@ -222,6 +220,18 @@ main{
     padding: 2rem 1.5rem 2rem 1.5rem;
     border-radius: 1.5rem;
     box-shadow: 2px 4px 8px 0px rgba(45, 48, 61, 25%);
+}
+@media screen and (min-width: 984px){
+    .user_card_section{
+        position: fixed;
+        top: 5rem;
+        width: 25%;
+    }
+    .user_description_section{
+        width: 70%;
+        margin-top: 9rem;
+        margin-left: auto;
+    }
 }
 .user_photo_section img{
     width: 100%;
@@ -260,14 +270,32 @@ h3{
     border-radius: 0.5rem;
     font-size: 1.5rem;
     display: grid;
-    place-items: center;
-    
+    place-items: center; 
+}
+.social_net_wrapper_container a{
+    width: 1.5rem; 
+    height: 1.5rem; 
 }
 body.dark_theme .social_net_wrapper_container{
     background-color: #1B1D25;
 }
+body.dark_theme .social_net_wrapper_container:hover{
+    box-shadow: 2px 4px 4px 0px rgba(27, 29, 37, 25%);
+}
+body.dark_theme .social_net_wrapper_container:focus{
+    background-color: #31364B;
+    box-shadow: 2px 4px 4px 0px rgba(49, 54, 75, 25%);
+}
+
 body.light_theme .social_net_wrapper_container{
     background-color: #C2C6E2;
+}
+body.light_theme .social_net_wrapper_container:hover{
+    box-shadow: 2px 4px 4px 0px rgba(194, 198, 226, 25%);
+}
+body.light_theme .social_net_wrapper_container:focus{
+    background-color: #AAB1D9;
+    box-shadow: 2px 4px 4px 0px rgba(170, 177, 217, 25%);
 }
 
 body.dark_theme .social_net_wrapper_container a svg{
@@ -290,10 +318,28 @@ body.dark_theme .hire_user_button{
     background-color: #E4E6F5;
     color: #1B1D25;
 }
+body.dark_theme .hire_user_button:hover{
+    box-shadow: 2px 4px 4px 0px rgba(228, 230, 245, 25%);
+}
+body.dark_theme .hire_user_button:focus{
+    background-color: #C4C9E9;
+    color: #1B1D25;
+    box-shadow: 2px 4px 4px 0px rgba(196, 201, 233, 25%);
+}
+
 body.light_theme .hire_user_button{
     background-color: #20232F;
     color: #C2C6E2;
 }
+body.light_theme .hire_user_button:hover{
+    box-shadow: 2px 4px 4px 0px rgba(32, 35, 47, 25%);
+}
+body.light_theme .hire_user_button:focus{
+    background-color: #2B314C;
+    color: #C2C6E2;
+    box-shadow: 2px 4px 4px 0px rgba(32, 35, 47, 25%);
+}
+
 
 
 
@@ -411,6 +457,21 @@ body.dark_theme .resume_button svg{
     color: #D9DBF1;
     font-size: 1.563rem;
 }
+body.dark_theme .resume_button:hover{
+    box-shadow: 2px 4px 4px 0px rgba(221, 224, 241, 25%);
+}
+body.dark_theme .resume_button:focus{
+    border: 1.6px solid #C4C9E9;
+    color: #C4C9E9;
+    box-shadow: 2px 4px 4px 0px rgba(221, 224, 241, 25%);
+}
+body.dark_theme .resume_button:focus svg{
+    color: #C4C9E9;
+}
+
+
+
+
 body.light_theme .resume_button svg{
     color: #20232F;
     font-size: 1.563rem;
@@ -419,6 +480,18 @@ body.light_theme .resume_button{
     border: 1.6px solid #20232F;
     color: #20232F;
 }
+body.light_theme .resume_button:hover{
+    box-shadow: 2px 4px 4px 0px rgba(32, 35, 47, 25%);
+}
+body.light_theme .resume_button:focus{
+    border: 1.6px solid #2B314C;
+    color: #2B314C;
+    box-shadow: 2px 4px 4px 0px rgba(43, 49, 76, 25%);
+}
+body.light_theme .resume_button:focus svg{
+    color: #2B314C;
+}
+
 .user_card_section .resume_button{
     display: none;
 }
@@ -1014,6 +1087,13 @@ body.light_theme .checkbox_container .checkmark:after{
     color: #E4E6F5;
     font-size: 1.25rem;
     font-family: 'Jura';
+}
+.form_button:hover{
+    box-shadow: 2px 4px 4px 0px rgba(61, 54, 186, 25%);
+}
+.form_button:focus{
+    background-color: #605BBE;
+    box-shadow: 2px 4px 4px 0px rgba(96, 91, 190, 25%);
 }
 .form_button svg{
     font-size: 1.563rem;
